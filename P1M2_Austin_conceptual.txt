@@ -1,0 +1,14 @@
+Jelaskan latar belakang adanya bagging dan cara kerja bagging !
+--> Bagging ada karena masalah pada model machine learning, seperti decision tree, yang punya variance tinggi. Model ini sangat sensitif terhadap perubahan kecil di data training. 
+Sedikit saja data training berubah, hasil prediksinya bisa beda jauh.
+Akibatnya, model cenderung overfitting, bagus di data training, tapi jelek di data baru.
+cara kerja bagging menjadi 3, Bootsrap, Training Pararel, Agregasi.
+
+Jelaskan perbedaan cara kerja algoritma Random Forest dengan algoritma boosting yang Anda pilih !
+--> Algoritama Random Forest yang saya pilih dia bekerja dengan cara melakukan sampling dulu,
+lalu dari banyaknya pohon dia latih bersama, lalu hasilnya di agregasi. Berbeda dengan XGBoost yang saya pakai.
+XGBoost bekerja dengan memperbaiki hasil sebelumnya. Jadi dia mengkoreksi hasil dari model sebelumnya.
+
+Jelaskan apa yang dimaksud dengan Cross Validation !
+-->Cross validation adalah teknik untuk menguji seberapa baik model kita bekerja pada data yang belum pernah dilihat.
+Seperti saat sebelum menghadapi sebuah ujian, diperlukannya latihan soal terlebih dahulu. Model berlatih di train set, lalu percobaan di Val set, ujian di Test set.
