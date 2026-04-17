@@ -1,0 +1,28 @@
+Q: Explain the background of bagging and how it works!
+
+A: Bagging was introduced to solve a common problem in machine learning models like decision trees — they tend to have high variance. This means the model is very sensitive to small changes in the training data. Even a slight change can lead to very different prediction results. Because of this, the model tends to overfit: it performs well on training data but poorly on new, unseen data.
+
+Bagging addresses this by reducing that variance through three main steps:
+1. Bootstrap — randomly sampling the training data with replacement to create multiple different subsets of the data
+2. Parallel Training — training a separate model on each of those subsets at the same time (independently)
+3. Aggregation — combining the predictions from all models (by averaging for regression, or majority vote for classification) to produce the final output
+
+By combining many models trained on different samples, the overall prediction becomes more stable and less likely to overfit.
+
+---
+
+Q: Explain the difference between how Random Forest and the boosting algorithm you chose work!
+
+A: Random Forest works by first sampling the data (bootstrap), then training many decision trees independently and in parallel on those samples, and finally aggregating their results. Each tree is also trained on a random subset of features, which helps reduce correlation between trees and makes the overall model more stable.
+
+XGBoost (the boosting algorithm I used) works differently. Instead of training models independently, XGBoost trains models sequentially — each new tree is built to correct the mistakes of the previous one. This means every iteration focuses on the errors that were not handled well before, gradually improving the overall prediction. XGBoost also adds regularization to prevent overfitting, which makes it very powerful for structured data.
+
+In short: Random Forest builds many trees in parallel and averages them, while XGBoost builds trees one by one, with each tree learning from the errors of the last.
+
+---
+
+Q: Explain what Cross Validation is!
+
+A: Cross validation is a technique used to test how well a model will perform on data it has never seen before. Think of it like practice tests before a real exam — you want to make sure you're actually learning, not just memorizing the exam questions.
+
+In practice, the data is split into three parts: the training set (where the model learns), the validation set (where we check performance during model development), and the test set (the final evaluation on completely unseen data). With k-fold cross validation, the training data is split into k parts, and the model is trained and validated k times — each time using a different fold as the validation set. This gives us a more reliable estimate of how the model will generalize to new data.

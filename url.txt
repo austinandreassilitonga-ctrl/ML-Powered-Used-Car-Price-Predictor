@@ -1,5 +1,0 @@
-data set : https://www.kaggle.com/datasets/sukhmandeepsinghbrar/car-price-prediction-dataset
-
-drive : https://drive.google.com/drive/folders/1FJPrq4Ah2R93vrF4j4m8ET7hFi6WUOi_?usp=sharing
-
-model : https://huggingface.co/spaces/austinsilitonga12/Used_Car-price-predict
