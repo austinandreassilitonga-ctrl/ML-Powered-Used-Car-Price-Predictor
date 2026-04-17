@@ -1,4 +1,4 @@
-# Used Car Price Prediction
+# AutoValue : ML Powered Used Car Predictor
 
 A machine learning project to help used car companies in India set fair and objective prices for the cars they sell — using data, not guesswork.
 
